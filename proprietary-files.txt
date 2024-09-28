@@ -2128,3 +2128,6 @@ system/lib/libsink.so
 vendor/bin/mnld
 vendor/lib/libaalservice.so
 vendor/lib64/libaalservice.so
+
+# FM Radio
+-system_ext/lib64/libfmjni.so
