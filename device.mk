@@ -174,7 +174,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
     
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \

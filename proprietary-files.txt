@@ -2128,4 +2128,3 @@ system/lib/libsink.so
 vendor/bin/mnld
 vendor/lib/libaalservice.so
 vendor/lib64/libaalservice.so
--vendor/bin/hw/android.hardware.vibrator-service.mediatek
