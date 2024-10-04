@@ -2130,4 +2130,4 @@ vendor/lib/libaalservice.so
 vendor/lib64/libaalservice.so
 
 # FM Radio
--system_ext/lib64/libfmjni.so
+-system_ext/lib64/libfmjni.so:system/lib64/libfmjni.so
