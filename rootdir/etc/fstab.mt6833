@@ -23,7 +23,7 @@ odm                              /odm           ext4   ro       wait,logical,fir
 /dev/block/by-name/frp           /persistent    emmc   defaults                                     defaults
 
 # Oppo
-/dev/block/by-name/opporeserve2      /mnt/vendor/opporeserve             ext4   nosuid,nodev,noatime,barrier=1                           wait,check,first_stage_mount,nofail
+/dev/block/by-name/opporeserve2 /mnt/vendor/opporeserve ext4 nosuid,nodev,noatime,barrier=1 wait,check,first_stage_mount,nofail
 /dev/block/by-name/odmdtbo       /odmdtbo       emmc           defaults                       defaults
 /dev/block/by-name/otp           /otp           emmc           defaults                       defaults
 

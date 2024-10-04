@@ -166,9 +166,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service \
-    android.hardware.health@1.0 \
-    android.hardware.health@2.0
+    android.hardware.health@2.1-service
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -253,13 +251,14 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-   DialerOverlayDenji	\
-   FrameworksResOverlayDenji \
-   SettingsOverlayDenji \
-   SettingsProviderDenji \
-   SystemUIOverlayDenji \
-   TelephonyOverlayDenji \
-   WifiResOverlayDenji
+   CarrierConfigOverlay	\
+   FrameworksOverlay \
+   SettingsOverlay \
+   SettingsProviderOverlay \
+   SystemUIOverlay \
+   TelephonyOverlay \
+   TetheringOverlay \
+   WifiOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -326,6 +325,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor \
     android.hardware.power@1.3.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
@@ -368,24 +368,28 @@ PRODUCT_PACKAGES += \
     init.insmod.sh
 
 PRODUCT_PACKAGES += \
-    fstab.mt6833 \
-    init.connectivity.rc \
-    fstab.mt6833_ramdisk \
-    init.modem.rc \
-    init.mt6833.rc \
-    init.mt6833.usb.rc \
+    factory_init.connectivity.rc    \
+    factory_init.project.rc \
+    factory_init.project.rc \
+    fstab.mt6833    \
+    fstab.mt6833_ramdisk    \
+    init.connectivity.rc    \
+    init.modem.rc   \
+    init.mt6833.power.rc    \
+    init.mt6833.rc  \
+    init.mt6833.usb.rc  \
     init.project.rc \
-    init.sensor_2_0.rc \
-    ueventd.mt6833.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6833:$(TARGET_COPY_OUT_RAMDISK)/system/etc/recovery.fstab \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6833:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6833 \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6833.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6833.rc  \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6833.rc:$(TARGET_COPY_OUT_ROOT)/init.recovery.mt6833.rc
+    init.sensor_2_0.rc  \
+    init_connectivity.rc    \
+    meta_init.connectivity.rc   \
+    meta_init.modem.rc  \
+    meta_init.project.rc    \
+    meta_init.rc    \
+    multi_init.rc   \
+    ueventd.mtk.rc
 
 PRODUCT_PACKAGES += \
-	init.recovery.mt6833.rc
+    init.recovery.mt6833.rc
 
 # Secure Element
 PRODUCT_PACKAGES += \

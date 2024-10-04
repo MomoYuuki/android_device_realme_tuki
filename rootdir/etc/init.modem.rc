@@ -25,7 +25,14 @@ on early-init
     write /sys/class/net/ccmni18/queues/rx-0/rps_cpus "0D"
     write /sys/class/net/ccmni19/queues/rx-0/rps_cpus "0D"
     write /sys/class/net/ccmni20/queues/rx-0/rps_cpus "0D"
-#    setprop ro.vendor.net.upload.mark.default blocking
+    #ifdef OPLUS_BUG_COMPATIBILITY
+    #yanzhou.chen@RM.NW.DATA 2021/1/17.165462 delete for blocking antutu test
+    #setprop ro.vendor.net.upload.mark.default blocking
+    #endif OPLUS_BUG_COMPATIBILITY
+
+    #Liwei@CONNECTIVITY.WIFI.NETWORK, 2020/12/04, bug id:556258,
+    #change netdev_max_backlog from 50000 to 100000,Reduce UDP pkt loss
+    write /proc/sys/net/core/netdev_max_backlog 100000
 
 on post-fs-data
 
