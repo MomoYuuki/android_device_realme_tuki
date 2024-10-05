@@ -2015,8 +2015,6 @@ odm/lib/vendor.oplus.hardware.appradio@1.0.so
 odm/lib/vendor.oplus.hardware.radio@1.0.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 odm/lib64/vendor.oplus.hardware.radio@1.0.so
-vendor/etc/vintf/manifest/oplus_appradio_device_manifest.xml
-vendor/etc/vintf/manifest/oplus_radio_device_manifest.xml
 
 
 # Thermal
