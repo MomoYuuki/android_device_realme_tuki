@@ -257,7 +257,7 @@ PRODUCT_PACKAGES += \
    SettingsProviderOverlay \
    SystemUIOverlay \
    TelephonyOverlay \
-   TetheringOverlay \
+   TetheringConfigOverlay \
    WifiOverlay
 
 # Permissions
