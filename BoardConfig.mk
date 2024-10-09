@@ -21,6 +21,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Boot Image
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
@@ -58,6 +61,7 @@ TARGET_SCREEN_DENSITY := 320
 BOARD_HAVE_MTK_FM := true
 
 # Kernel
+BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/Image.gz
@@ -66,8 +70,8 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(wildcard $(DEVICE_PATH)-kernel/modules/*.ko)
 
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_KERNEL_SOURCE := $(DEVICE_PATH)-kernel/headers
-TARGET_KERNEL_CONFIG := defconfig
+TARGET_KERNEL_SOURCE := kernel/realme/tuki
+TARGET_KERNEL_CONFIG := tuki_defconfig
 
 # MediaTek
 BOARD_HAS_MTK_HARDWARE := true
@@ -102,7 +106,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_ODM := odm
 
 # Platform
-BOARD_VENDOR := realme
 TARGET_BOARD_PLATFORM := mt6833
 
 # Properties
